@@ -5,19 +5,19 @@
 
 int main()
 {
-	int edad, edad_2=edad+10;
+	int edad, edad_2;
 	char nombre[20];
 
-		printf("Este es el 1er programa del curso");
+		
+
 	printf("Hola, dime tu nombre:\n");
-		scanf("%c",&nombre);
-	printf("\nHola: %c\n",nombre);
+		scanf("%s",&nombre);
 	printf("introduce tu edad:\n");
-	scanf("%i", &edad);
-	printf("\nTu edad es: %i\n",edad);
+	scanf("%i",&edad);
+	edad_2=edad+10;
+	printf("%s edad en 2018 es:%i \n",nombre,edad_2);
 	
-		printf("nTu edad en 2028 sera: %i\n",edad_2);
-return 0;
+		
 }
 
 
