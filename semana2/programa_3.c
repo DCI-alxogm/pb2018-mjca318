@@ -15,8 +15,8 @@ int main ()
 			X1=(a+b)*c/d;
 X2=((a+b)*c)/d;
 			X3=a+(b*c)/d;
-			printf("%f primer resultado:\n",X1);
-			printf("%f segundo resultado:\n",X2);
-			printf("%f tercer resultado:\n",X3);
+			printf("%f es tu primer resultado\n",X1);
+			printf("%f es tu segundo resultado\n",X2);
+			printf("%f es tu tercer resultado\n",X3);
 			}
 

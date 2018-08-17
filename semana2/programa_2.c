@@ -12,7 +12,7 @@ int main()
 	scanf("%i",&b);
 		printf("dame un valor para c\n");
 	scanf("%i",&c);
-	printf("dame una variable para d\n");
+	printf("dame un valor para d\n");
 	scanf("%i",&d);
 	e=(a+b)*c/d;
 		f=((a+b)*c)/d;
