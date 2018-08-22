@@ -7,4 +7,4 @@ int main (): le indica al programa que debe responder a los sig. comandos
 printf: indica lo que el programa debera imprimir a la pantalla.
 scanf: indica que el programa debe ejecutar las acciones anteriormente establecidas.
 
-la diferencia es basicamente que el en ejercicio 2 usamos variables del tipo entero y en el 3 variables del tipo flotante
+La diferencia es basicamente que el en ejercicio 2 usamos variables del tipo entero y en el 3 variables del tipo flotante
