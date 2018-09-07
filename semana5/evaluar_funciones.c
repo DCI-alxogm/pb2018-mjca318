@@ -2,8 +2,8 @@
 #include<math.h>
 int main()
 {
-	int n,i,o,p;
-	float x,exponente,logaritmo,seno,coseno,raiz;
+	int n,i,o;
+	float q,p,y,x,exponente,logaritmo,seno,coseno,raiz;
 		while(o==1||2)
 		{
 		       	if(o==2)
@@ -11,20 +11,24 @@ int main()
 
 
 			printf("Este programa calcula algunas funciones\n");
-			printf("Asigna un valor a x\n");
+			printf("Elige el valor para iniciar \n");
 			scanf("%f",&x);
-			printf("Elige el valor con el cual quieras iniciar\n");
-			scanf("%i", &n);
-			printf("Elige en que valor quieres terminar\n");
-			scanf("%i",&p);
-			for  (i=n;i<p;i++)
-			{
+			printf("Elige el valor para terminar\n");
+			scanf("%f", &q);
+			printf("introduce tu espaciado\n");
+			scanf("%f",&p);
+			n=((n-x)/p);
+			for  (i=n;i<=n;i++)
 
-				exponente=exp(x);
-				logaritmo=log(x);
-				seno=sin(x);
-				coseno=cos(x);
-				raiz=sqrt(x);
+			{       
+				y=(x+(p*i));
+
+				exponente=exp(y);
+				logaritmo=log(y);
+				seno=sin(y);
+				coseno=cos(y);
+				raiz=sqrt(y);
+				printf("el numero que asignaste es %f\n", y);
 				
 printf("el valor para exp es:%f \n",exponente);
 printf("el valor para el log es:%f \n",logaritmo);
@@ -34,7 +38,7 @@ printf("el valor para la raiz es:%f\n",raiz);
 			}
 			printf("Si quieres reiniciar el programa presiona 1, Para salir presiona 2.\n");		
 			scanf("%i",&o);
-		}
+	}
 
 return 0;
 }
