@@ -4,7 +4,7 @@ int main()
 {
 	int fact=1,i,op=1,digito,resultado;
 
-	while(op==1||2)
+	while(op==1)
 	{
 
 		 printf("Dame un digito\n");
@@ -20,6 +20,8 @@ int main()
 	}
 
 	printf("\n tu resultado en factorial es: %i", resultado);
+	fact=1;
+
 	}
 			printf("\n Si quieres otra opcion presiona 1");
 
