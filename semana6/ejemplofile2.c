@@ -8,7 +8,7 @@ int main (){
 		char var[255];
 
 			
-			archivo=fopen("text.txt","r");
+			archivo=fopen("test.txt","r");
 			fgets(var,255,(FILE*)archivo);
 			printf("%s",var);
 			fscanf(archivo,"%s",var);

@@ -1,70 +1,96 @@
-/*Este es el segundo ejercicio de la semana 6*/
-/*Creado el 13 de Septiembre del 2018 por Marijo Cisneros*/
+#include <stdio.h>
 
+int main(){
+        
+	
+	FILE *arc;
+	arc = fopen("resumen.txt", "r");
+	
+        int N;
 
-#include<stdio.h>
-int main (){
-                FILE *archivo;
+        fscanf(arc, "%i", &N);
 
-                int N=10,i,semestre1=0,semestre2=0,semestre3=0,semestre4=0,semestre5=0,semestre6=0,semestre7=0,semestre8=0,semestre9=0,semestre10=0,h,m;
-                float promediox=0;
-		char nombre[260],sexo[260],edad[260],semestre[260],promedio[260];
+        char an;
+        float edad[N], sex[N], sem[N], semestre[9], hombre=0, mujer=0, promedio=0, edad_sem[9], prom_edad=0;
+        int a=0;
+        float califsem[9], cali[N];
 
+        
+        for(int i=0 ; i<9 ; i++){
+                semestre[i]=0;
+                edad_sem[i]=0;
+                califsem[i]=0;
+        }
 
-
-
-
-                       archivo=fopen("informacion_estudiantes.txt","r");
-
-			for(i=0;i<N;i++){
-
-			fgets(semestre,260,(FILE*)archivo);
-fscanf("%s",semestre);
-
-                        if (semestre==1)++semestre1;
-                        else if (semestre==2)++semestre2;
-                        else if(semestre==3)++semestre3;
-                        else if(semestre==4)++semestre4;
-                        else if(semestre==5)++semestre5;
-                        else if(semestre==6)++semestre6;
-                        else if(semestre==7)++semestre7;
-                        else if(semestre==8)++semestre8;
-                        else if(semestre==9)++semestre9;
-                        else if(semestre==10)++semestre10;
-
-                       fgets(promedio,260,(FILE*)archivo);
-fscanf("%s",promedio);
-
-                        promediox=promediox+promedio;
-
-
-                        fgets(edad,260,(FILE*)archivo);
-			fscanf("%s",edad);
-
-			fgets(sexo,260,(FILE*)archivo);
-			printf("Si el alumno es hombre presione 0, si es mujer presione 1\n");
-fscanf("%s",sexo);
-
-                        
-                       
-                        if (sexo==h)++h;
-                        else if (sexo[i]==m)++m;
+        for(int i=0 ; i<N ; i++){
+                fscanf(arc,"%f %c %f %f", &edad[i], &an, &sem[i], &cali[i]);
+                if(an=='H' || an=='h'){
+                        sex[i]=0;
+                        hombre++;
+                }
+                else{
+                        sex[i]=1;
+                        mujer++;
+                }
+                a = sem[i]-1;
+                
+                edad_sem[a]+=edad[i];
+                
+                prom_edad+=edad[i];
+               
+                califsem[a]+=cali[i];
+               
+                promedio+=cali[i];
+                
+                semestre[a]++;
+               
+        }
+	fclose(arc);
 
 
 
-                                        }
+	FILE *archivo;	
+	archivo = fopen("informacion_estudiantes.txt", "w");
+	fprintf(archivo, "\n resumen de los datos de los alumnos:");
+        float temp;
 
-                        printf("Los estudiantes de cada semestre son, en el 1ro: %i, 2do: %i, 3ro: %i, 4to: %i, 5to: %i, 6to: %i,  7mo: %i, 8vo: %i,  9no: %i  10mo: %i  \n",semestre1,semestre2,semestre3,semestre4,semestre5,semestre6,semestre7,semestre8,semestre9,semestre10);
-
-                        promediox=promediox/10;
-                        printf("Promedio global: %f \n",promediox);
-
-                        printf(" %i son mujeres y %i son hombres\n",m,h);
-
-
-
-
-        return 0;
+        
+        fprintf(archivo, "\nTotal de estudiantes: %i , De los cuales %0.0f son mujeres y %0.0f son hombres", N, mujer, hombre);
+        fprintf(archivo, "\n Estudiantes por semestre:");
+        for(int i=0 ; i<8 ; i++){
+                fprintf(archivo, "\n Semestre %i°    %0.0f", i+1, semestre[i]);
         }
 
 
+        temp = promedio/N;
+
+        fprintf(archivo, "\nPromedio de calificaciones: %0.2f", temp);
+        fprintf(archivo, "\nPromedio de calificaciones por semestre:");
+        for(int i=0 ; i<8 ; i++){
+                if(semestre[i]!=0){
+                        temp= califsem[i]/semestre[i];
+                }
+                else{
+                        temp=0;
+                }
+                fprintf(archivo, "\n Semestre %i°  %0.2f", i+1, temp);
+        }
+
+        temp = prom_edad/N;
+	
+        fprintf(archivo, "\n Promedio de edad : %0.2f", temp);
+        fprintf(archivo, "\n Promedio de edad por semestre:");
+        for(int i=0 ; i<8 ; i++){
+                if(semestre[i]!=0){
+                        temp = edad_sem[i]/semestre[i];
+                }
+                else{
+                        temp=0;
+                }
+                fprintf(archivo, "\n Semestre %i°    %0.2f", i+1, temp);
+        }
+        fprintf(archivo, "\n");
+	fclose(archivo);
+	
+        return 0;
+}

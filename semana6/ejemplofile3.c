@@ -7,7 +7,7 @@ int main (){
 		FILE *archivo;
 			
 			
-			archivo=fopen("Informacion_estudiantes.txt","w");
+			archivo=fopen("informacion_estudiantes.txt","w");
 			
 				fclose(archivo);
 

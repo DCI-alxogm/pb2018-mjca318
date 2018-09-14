@@ -1,0 +1,7 @@
+
+Para x = 5.000000
+Exponencial es igual a 148.413159
+Logaritmo es igual a 0.698970
+Seno es igual a -0.958924
+Coseno es igual a 0.283662
+Raíz cuadrada es igual a 2.236068

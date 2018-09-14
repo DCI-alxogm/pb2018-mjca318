@@ -10,7 +10,7 @@ int main (){
 
 			
 			
-			archivo=fopen("text.txt","w");
+			archivo=fopen("test.txt","w");
 			
 		
 			fputs("Esta es una prueba de fputs \n",archivo);
