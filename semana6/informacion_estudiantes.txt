@@ -1,0 +1,12 @@
+#nombre sexo edad semestre promedio
+
+Mariana m 19 1 8.5
+Luis h 24 3 8.1
+Carolina m 20 3 9.5 
+Hiram h 18 1 7.5
+Karla m 21 2 7.0
+José h 22 3 7.8
+Daniela h 19 1 8.5
+Elisa m 24 2 8.0
+Carlos h 20 3 7.8
+Sebastian h 18 1 9.8

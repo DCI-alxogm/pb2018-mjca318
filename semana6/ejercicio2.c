@@ -14,41 +14,40 @@ int main (){
 
 
 
-
-                       archivo=fopen("Informacion_estudiantes.txt","r");
+                       archivo=fopen("informacion_estudiantes.txt","r");
 
 			for(i=0;i<N;i++){
 
-			fgets(semestre,260,(FILE *archivo);
+			fgets(semestre,260,(FILE*)archivo);
 fscanf("%s",semestre);
 
-                        if (semestre[i]==1)++semestre1;
-                        else if (semestre[i]==2)++semestre2;
-                        else if(semestre[i]==3)++semestre3;
-                        else if(semestre[i]==4)++semestre4;
-                        else if(semestre[i]==5)++semestre5;
-                        else if(semestre[i]==6)++semestre6;
-                        else if(semestre[i]==7)++semestre7;
-                        else if(semestre[i]==8)++semestre8;
-                        else if(semestre[i]==9)++semestre9;
-                        else if(semestre[i]==10)++semestre10;
+                        if (semestre==1)++semestre1;
+                        else if (semestre==2)++semestre2;
+                        else if(semestre==3)++semestre3;
+                        else if(semestre==4)++semestre4;
+                        else if(semestre==5)++semestre5;
+                        else if(semestre==6)++semestre6;
+                        else if(semestre==7)++semestre7;
+                        else if(semestre==8)++semestre8;
+                        else if(semestre==9)++semestre9;
+                        else if(semestre==10)++semestre10;
 
-                       fgets(promedio,260,(FILE *archivo);
+                       fgets(promedio,260,(FILE*)archivo);
 fscanf("%s",promedio);
 
-                        promediox=promediox+promedio[i];
+                        promediox=promediox+promedio;
 
 
-                        fgets(edad,260,(FILE *archivo);
+                        fgets(edad,260,(FILE*)archivo);
 			fscanf("%s",edad);
 
-			fgets(sexo,260,(FILE *archivo);
-			printf("Para sexo masculino presione 0, para sexo femenino persione 1\n");
+			fgets(sexo,260,(FILE*)archivo);
+			printf("Si el alumno es hombre presione 0, si es mujer presione 1\n");
 fscanf("%s",sexo);
 
-                        printf("Para hombre presione 0, para mujer presione 1\n");
-                        scanf("%i",&sexo[i]);
-                        if (sexo[i]==h)++h;
+                        
+                       
+                        if (sexo==h)++h;
                         else if (sexo[i]==m)++m;
 
 
