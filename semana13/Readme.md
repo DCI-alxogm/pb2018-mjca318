@@ -1,0 +1,1 @@
+En la semana 13 empezamos a utilizar python, hicimos algunos ejemplos asignados por el ayudante de la profesora y un ejercicio que la profesora nos asigno. Vimos como declarar variables, graficar, crear programas, etc... La diferencia con C es que python nos deja ver los resultados del programa conforme lo vamos creando
